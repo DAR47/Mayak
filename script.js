@@ -61,3 +61,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+function openModal(title, description) {
+
+    document.getElementById("modalTitle").textContent = title;
+
+    document.getElementById("modalDescription").textContent = description;
+
+    document.getElementById("serviceModal").style.display = "block";
+}
+
+function closeModal() {
+
+    document.getElementById("serviceModal").style.display = "none";
+}
+
+/* Закрытие при клике вне окна */
+
+window.onclick = function(event) {
+
+    let modal = document.getElementById("serviceModal");
+
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
