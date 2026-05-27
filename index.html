@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Оздоровительный центр «Маяк»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+
+        <div class="logo">ОЦ «Маяк»</div>
+
+        <nav class="nav">
+            <a href="#">Главная</a>
+            <a href="#services">Услуги</a>
+            <a href="#form">Специалисты</a>
+            <a href="#form">Контакты</a>
+        </nav>
+
+        <button class="btn" id="openModalBtn">Записаться</button>
+
+    </div>
+</header>
+
+<section class="intro">
+    <div class="intro-content">
+        <h1>Оздоровительный центр «Маяк»</h1>
+        <p>Комплексное восстановление здоровья и программы оздоровления в курортной зоне Железноводска.</p>
+        <button class="btn-primary" id="openModalBtn2">Онлайн-запись</button>
+    </div>
+</section>
+
+<!-- УСЛУГИ -->
+<section class="services" id="services">
+
+    <h2>Наши услуги</h2>
+
+    <div class="services-container">
+
+        <!-- Лечебный массаж -->
+        <div class="service-card" onclick="openModal(
+        'Лечебный массаж',
+        'Профессиональный лечебный массаж помогает снять мышечное напряжение, улучшить кровообращение и ускорить восстановление организма после нагрузок.'
+        )">
+            <h3>Лечебный массаж</h3>
+            <p>Восстановление и расслабление организма</p>
+        </div>
+
+        <!-- Физиотерапия -->
+        <div class="service-card" onclick="openModal(
+        'Физиотерапия',
+        'Физиотерапевтические процедуры применяются для профилактики заболеваний, уменьшения болевых ощущений и общего укрепления организма.'
+        )">
+            <h3>Физиотерапия</h3>
+            <p>Современные методы восстановления</p>
+        </div>
+
+        <!-- Гидротерапия -->
+        <div class="service-card" onclick="openModal(
+        'Гидротерапия',
+        'Лечебные ванны, душ Шарко и другие водные процедуры способствуют расслаблению, улучшению обмена веществ и укреплению здоровья.'
+        )">
+            <h3>Гидротерапия</h3>
+            <p>Оздоровительные водные процедуры</p>
+        </div>
+
+        <!-- SPA -->
+        <div class="service-card" onclick="openModal(
+        'SPA-процедуры',
+        'Комплекс SPA-процедур направлен на снятие стресса, улучшение состояния кожи и восстановление эмоционального равновесия.'
+        )">
+            <h3>SPA-процедуры</h3>
+            <p>Релакс и уход за телом</p>
+        </div>
+
+        <!-- ЛФК -->
+        <div class="service-card" onclick="openModal(
+        'Лечебная физкультура',
+        'Занятия лечебной физкультурой помогают укрепить мышцы, улучшить подвижность суставов и поддерживать физическую активность.'
+        )">
+            <h3>Лечебная физкультура</h3>
+            <p>Здоровье через движение</p>
+        </div>
+
+        <!-- Консультации -->
+        <div class="service-card" onclick="openModal(
+        'Консультации специалистов',
+        'Квалифицированные специалисты центра проводят консультации по вопросам здоровья, питания и профилактики заболеваний.'
+        )">
+            <h3>Консультации специалистов</h3>
+            <p>Профессиональная помощь и рекомендации</p>
+        </div>
+
+        <!-- Детокс -->
+        <div class="service-card" onclick="openModal(
+        'Программы детоксикации',
+        'Оздоровительные программы детоксикации направлены на очищение организма, улучшение самочувствия и восстановление энергии.'
+        )">
+            <h3>Программы детоксикации</h3>
+            <p>Комплексное очищение организма</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+
+<div class="modal" id="serviceModal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+
+        <span class="close" id="closeModal">&times;</span>
+
+        <h2>Онлайн-запись</h2>
+
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="tel" placeholder="Телефон" required>
+
+            <select>
+                <option>Выберите услугу</option>
+                <option>Массаж</option>
+                <option>Физиотерапия</option>
+                <option>Лечебные ванны</option>
+                <option>ЛФК</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Отправить заявку</button>
+        </form>
+
+    </div>
+</div>
+<section class="doctors" id="doctors">
+    <h2>Наши специалисты</h2>
+
+    <div class="doctors-grid">
+
+        <div class="doctor-card">
+            <div class="doctor-photo" style="background-image: url(imgs/person2.jpeg);" ></div>
+            <h3>Иванова Алина Сергеевна</h3>
+            <p>Терапевт</p>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-photo" style="background-image: url(imgs/person1.jpeg);" ></div>
+            <h3>Петров Дмитрий Олегович</h3>
+            <p>Физиотерапевт</p>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-photo" style="background-image: url(imgs/person4.jpeg);" ></div>
+            <h3>Соколова Марина Викторовна</h3>
+            <p>Специалист ЛФК</p>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-photo" style="background-image: url(imgs/person3.jpeg);" ></div>
+            <h3>Кузнецов Андрей Павлович</h3>
+            <p>Массажист</p>
+        </div>
+
+    </div>
+</section>
+<section class="reviews" id="reviews">
+    <h2>Отзывы пациентов</h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+            <div class="review-text">
+                После курса процедур в центре «Маяк» значительно улучшилось самочувствие. Отличный персонал и внимательное отношение.
+            </div>
+            <div class="review-name">— Елена К.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-text">
+                Проходил физиотерапию и массаж. Очень профессиональный подход, результат почувствовал уже через несколько сеансов.
+            </div>
+            <div class="review-name">— Сергей М.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-text">
+                Удобная запись, комфортные условия и грамотные специалисты. Рекомендую всем, кто заботится о здоровье.
+            </div>
+            <div class="review-name">— Ольга В.</div>
+        </div>
+
+        <div class="review-card">
+            <div class="review-text">
+                Приятная атмосфера и современное оборудование. Процедуры действительно помогают восстановиться.
+            </div>
+            <div class="review-name">— Андрей П.</div>
+        </div>
+
+    </div>
+</section>
+<section class="booking" id="form">
+    <h2>Онлайн-запись</h2>
+
+    <form class="booking-form" id="bookingForm">
+
+        <input type="text" id="name" placeholder="Ваше имя">
+
+        <input type="tel" id="phone" placeholder="Телефон">
+
+        <select id="service">
+            <option value="">Выберите услугу</option>
+            <option>Массаж</option>
+            <option>Физиотерапия</option>
+            <option>Лечебные ванны</option>
+            <option>ЛФК</option>
+            <option>Ингаляции</option>
+        </select>
+
+        <button type="submit">Записаться</button>
+
+    </form>
+</section>
+
+<!-- МОДАЛКА УСПЕХА -->
+<div class="success-modal" id="successModal">
+    <div class="success-content">
+        <h3>Заявка отправлена</h3>
+        <p>Мы свяжемся с вами в ближайшее время</p>
+        <button id="closeSuccess">OK</button>
+    </div>
+</div>
+<section class="contacts" id="contacts">
+    <h2>Контакты</h2>
+
+    <div class="contacts-wrapper">
+
+        <div class="contacts-info">
+
+            <h3>Оздоровительный центр «Маяк»</h3>
+
+            <p>📍 г. Железноводск, ул. Курортная, 12</p>
+            <p>📞 +7 (928) 345-67-89</p>
+            <p>✉ info@mayak-health.ru</p>
+
+            <p>🕒 Пн–Сб: 08:00 – 20:00</p>
+            <p>Вс: выходной</p>
+
+        </div>
+
+        <div class="contacts-map">
+            <iframe 
+                src="https://www.google.com/maps?q=Zheleznovodsk&output=embed"
+                loading="lazy">
+            </iframe>
+        </div>
+
+    </div>
+</section>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-block">
+            <h3>ОЦ «Маяк»</h3>
+            <p>Оздоровительный центр в курортной зоне города Железноводск</p>
+        </div>
+
+        <div class="footer-block">
+            <h4>Навигация</h4>
+            <p><a href="#">Главная</a></p>
+            <p><a href="#services">Услуги</a></p>
+            <p><a href="#doctors">Специалисты</a></p>
+            <p><a href="#reviews">Отзывы</a></p>
+            <p><a href="#contacts">Контакты</a></p>
+        </div>
+
+        <div class="footer-block">
+            <h4>Контакты</h4>
+            <p>📞 +7 (928) 345-67-89</p>
+            <p>✉ info@mayak-health.ru</p>
+            <p>📍 г. Железноводск</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Оздоровительный центр «Маяк». Все права защищены.
+    </div>
+
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
